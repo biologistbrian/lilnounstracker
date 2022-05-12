@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  hash: MyString
+  block: 1
+  when: 2022-05-12 09:49:50
+
+two:
+  hash: MyString
+  block: 1
+  when: 2022-05-12 09:49:50

@@ -1,0 +1,2 @@
+class Newauc < ApplicationRecord
+end
