@@ -13,7 +13,7 @@ task :check => :environment do
     		else
     		 	puts "an auction has begun"
     		 	zeetime = Time.at(tx["timeStamp"].to_i).to_datetime 
-    		 	nowtime = Datetime.now
+    		 	nowtime = DateTime.now
     		 	wawa = nowtime - zeetime
     		 	minago = ((wawa)* 24 * 60).to_i
     		 	varr = {:text => "Woot! @LilNounsDao launched a new auction " + minago.to_s + " minutes ago! Hurry, they end every 15 minutes. See the auction: https://lilnouns.wtf/ \r\n \r\n #NFTs #DAOs #web3 #crypto #blockchain #NFT"}
@@ -43,7 +43,7 @@ task :check => :environment do
     		else
     		 	puts "an auction has begun"
     		 	zeetime = Time.at(tx["timeStamp"].to_i).to_datetime 
-    		 	nowtime = Datetime.now
+    		 	nowtime = DateTime.now
     		 	wawa = nowtime - zeetime
     		 	minago = ((wawa)* 24 * 60).to_i
     		 	varr = {:text => "Woot! @LilNounsDao launched a new auction " + minago.to_s + " minutes ago! Hurry, they end every 15 minutes. See the auction: https://lilnouns.wtf/ \r\n \r\n #NFTs #DAOs #web3 #crypto #blockchain #NFT"}
