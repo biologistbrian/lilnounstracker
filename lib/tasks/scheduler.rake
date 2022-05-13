@@ -13,8 +13,10 @@ task :check => :environment do
     		else
     		 	puts "an auction has begun"
     		 	zeetime = Time.at(tx["timeStamp"].to_i).to_datetime 
-    		 	twtext = "Woot! @LilNounsDao launched a new auction at " + zeetime.strftime('%l:%M %p').to_s + " UTC! Hurry, they end every 15 minutes. See the auction: https://lilnouns.wtf/ \r\n \r\n #NFTs #DAOs #web3 #crypto #blockchain #NFT"
-    		 	varr = {:text => "Woot! @LilNounsDao launched a new auction at " + zeetime.strftime('%l:%M %p').to_s + " UTC! Hurry, they end every 15 minutes. See the auction: https://lilnouns.wtf/ \r\n \r\n #NFTs #DAOs #web3 #crypto #blockchain #NFT"}
+    		 	nowtime = Datetime.now
+    		 	wawa = nowtime - zeetime
+    		 	minago = ((wawa)* 24 * 60).to_i
+    		 	varr = {:text => "Woot! @LilNounsDao launched a new auction " + minago.to_s + " minutes ago! Hurry, they end every 15 minutes. See the auction: https://lilnouns.wtf/ \r\n \r\n #NFTs #DAOs #web3 #crypto #blockchain #NFT"}
     		 	carr = varr.to_json
     		 	tweet = HTTP.headers("Content-Type"=>"application/json").auth('OAuth oauth_consumer_key="TiWOmWL4yfSMvIv0EhzJFx0rv",oauth_token="1461034581407285254-RN8cKOjyt2A7pnHtdjUCDu9bqOJAXQ",oauth_signature_method="HMAC-SHA1",oauth_timestamp="1652370692",oauth_nonce="7MgT2MMa5vS",oauth_version="1.0",oauth_signature="RWUGhdUSEjm1koD%2BizCeldEH%2Fxg%3D"').post("https://api.twitter.com/2/tweets", :body => carr)
     			resp = JSON.parse(tweet.to_s)
@@ -41,8 +43,10 @@ task :check => :environment do
     		else
     		 	puts "an auction has begun"
     		 	zeetime = Time.at(tx["timeStamp"].to_i).to_datetime 
-    		 	twtext = "Woot! @LilNounsDao launched a new auction at " + zeetime.strftime('%l:%M %p').to_s + " UTC! Hurry, they end every 15 minutes. See the auction: https://lilnouns.wtf/ \r\n \r\n #NFTs #DAOs #web3 #crypto #blockchain #NFT"
-    		 	varr = {:text => "Woot! @LilNounsDao launched a new auction at " + zeetime.strftime('%l:%M %p').to_s + " UTC! Hurry, they end every 15 minutes. See the auction: https://lilnouns.wtf/ \r\n \r\n #NFTs #DAOs #web3 #crypto #blockchain #NFT"}
+    		 	nowtime = Datetime.now
+    		 	wawa = nowtime - zeetime
+    		 	minago = ((wawa)* 24 * 60).to_i
+    		 	varr = {:text => "Woot! @LilNounsDao launched a new auction " + minago.to_s + " minutes ago! Hurry, they end every 15 minutes. See the auction: https://lilnouns.wtf/ \r\n \r\n #NFTs #DAOs #web3 #crypto #blockchain #NFT"}
     		 	carr = varr.to_json
     		 	tweet = HTTP.headers("Content-Type"=>"application/json").auth('OAuth oauth_consumer_key="TiWOmWL4yfSMvIv0EhzJFx0rv",oauth_token="1461034581407285254-RN8cKOjyt2A7pnHtdjUCDu9bqOJAXQ",oauth_signature_method="HMAC-SHA1",oauth_timestamp="1652370692",oauth_nonce="7MgT2MMa5vS",oauth_version="1.0",oauth_signature="RWUGhdUSEjm1koD%2BizCeldEH%2Fxg%3D"').post("https://api.twitter.com/2/tweets", :body => carr)
     			resp = JSON.parse(tweet.to_s)
