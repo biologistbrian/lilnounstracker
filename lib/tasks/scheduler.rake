@@ -18,7 +18,7 @@ task :check => :environment do
     		 	minago = ((wawa)* 24 * 60).to_i
     		 	varr = {:text => "Woot! @LilNounsDao launched a new auction " + minago.to_s + " minutes ago! Hurry, they end every 15 minutes. See the auction: https://lilnouns.wtf/ \r\n \r\n #NFTs #DAOs #web3 #crypto #blockchain #NFT"}
     		 	carr = varr.to_json
-    		 	tweet = HTTP.headers("Content-Type"=>"application/json").auth('OAuth oauth_consumer_key="TiWOmWL4yfSMvIv0EhzJFx0rv",oauth_token="1461034581407285254-RN8cKOjyt2A7pnHtdjUCDu9bqOJAXQ",oauth_signature_method="HMAC-SHA1",oauth_timestamp="1652370692",oauth_nonce="7MgT2MMa5vS",oauth_version="1.0",oauth_signature="RWUGhdUSEjm1koD%2BizCeldEH%2Fxg%3D"').post("https://api.twitter.com/2/tweets", :body => carr)
+    		 	tweet = HTTP.headers("Content-Type"=>"application/json").auth('OAuth oauth_consumer_key="RHYYa8fa2l6F99ZY5zsYNPBaw",oauth_token="1461034581407285254-RN8cKOjyt2A7pnHtdjUCDu9bqOJAXQ",oauth_signature_method="HMAC-SHA1",oauth_timestamp="1652705981",oauth_nonce="zfbXnmV1h39",oauth_version="1.0",oauth_signature="0%2FZ%2FoX5P7NRCaCn48wwsb0PNpaw%3D" ').post("https://api.twitter.com/2/tweets", :body => carr)
     			resp = JSON.parse(tweet.to_s)
     			puts resp
     			Newauc.create(hashaddy: tx['hash'])
@@ -48,7 +48,7 @@ task :check => :environment do
     		 	minago = ((wawa)* 24 * 60).to_i
     		 	varr = {:text => "Woot! @LilNounsDao launched a new auction " + minago.to_s + " minutes ago! Hurry, they end every 15 minutes. See the auction: https://lilnouns.wtf/ \r\n \r\n #NFTs #DAOs #web3 #crypto #blockchain #NFT"}
     		 	carr = varr.to_json
-    		 	tweet = HTTP.headers("Content-Type"=>"application/json").auth('OAuth oauth_consumer_key="TiWOmWL4yfSMvIv0EhzJFx0rv",oauth_token="1461034581407285254-RN8cKOjyt2A7pnHtdjUCDu9bqOJAXQ",oauth_signature_method="HMAC-SHA1",oauth_timestamp="1652370692",oauth_nonce="7MgT2MMa5vS",oauth_version="1.0",oauth_signature="RWUGhdUSEjm1koD%2BizCeldEH%2Fxg%3D"').post("https://api.twitter.com/2/tweets", :body => carr)
+    		 	tweet = HTTP.headers("Content-Type"=>"application/json").auth('OAuth oauth_consumer_key="RHYYa8fa2l6F99ZY5zsYNPBaw",oauth_token="1461034581407285254-RN8cKOjyt2A7pnHtdjUCDu9bqOJAXQ",oauth_signature_method="HMAC-SHA1",oauth_timestamp="1652705981",oauth_nonce="zfbXnmV1h39",oauth_version="1.0",oauth_signature="0%2FZ%2FoX5P7NRCaCn48wwsb0PNpaw%3D" ').post("https://api.twitter.com/2/tweets", :body => carr)
     			resp = JSON.parse(tweet.to_s)
     			puts resp
     			Newauc.create(hashaddy: tx['hash'])
